@@ -10,6 +10,9 @@ function AddStudentModal({ isOpen, onClose }) {
   const handleSubmit = () => {
     const id = Date.now();
     dispatch(addStudent({ id, name, age: parseInt(age) }));
+
+    setName('');
+    setAge('');
     onClose();
   };
 
